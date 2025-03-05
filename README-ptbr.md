@@ -11,7 +11,7 @@ Projeto para aprendizado através do [The Odin Project](https://www.theodinproje
 Na descrição do projeto, foi indicado que o jogo deveria ser jogado apenas no console e que a criação de uma interface não era necessária. Mas, como estou estudando HTML, CSS e JavaScript, decidi utilizar as três tecnologias no mesmo projeto para praticar.
 
 ## Preview  
-Você pode visualizar o site ao vivo [aqui]()
+Você pode visualizar o site ao vivo [aqui](https://wagnertomaz.github.io/rock-paper-scissors-game/)
 
 ## Objetivo  
 O principal objetivo deste projeto foi aplicar e praticar os conceitos de JavaScript do [The Odin Project](https://www.theodinproject.com/) criando um jogo de Pedra, Papel e Tesoura. Este projeto ajudou a reforçar habilidades de resolução de problemas e os fundamentos da lógica em JavaScript.
