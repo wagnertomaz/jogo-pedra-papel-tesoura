@@ -11,7 +11,7 @@ Project for learning through [The Odin Project](https://www.theodinproject.com/)
 In the project’s assignment, it said to play only in the console and that creating an interface wasn’t necessary. But since I’m studying HTML, CSS, and JavaScript, I decided to use all three technologies in the same project to practice.
 
 ## Preview
-You can view the live site [here]()
+You can view the live site [here](https://wagnertomaz.github.io/rock-paper-scissors-game/)
 
 ## Goal
 The main goal of this project was to apply and practice the JavaScript concepts from [The Odin Project](https://www.theodinproject.com/) by creating a Rock Paper Scissors game. This project helped reinforce problem-solving skills and the fundamentals of JavaScript logic.
