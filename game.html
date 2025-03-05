@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Play vs Computer</title>
+</head>
+<body>
+    
+    <main class="main">
+        <section class="game-container">
+            <p id="result"><span class="round-span"></span><br>The game has 5 rounds.<br>To start the game, make your first move.</p>
+
+            <div class="button-option">
+                <button class="gameButton button-style" onclick="playGame('rock')">🪨</button>
+                <button class="gameButton button-style" onclick="playGame('paper')">📃</button>
+                <button class="gameButton button-style" onclick="playGame('scissors')">✂️</button>
+                <p id="scoreboard">SCORE: You <span class="win-span">0</span> x <span class="lose-span">0</span> Computer</p>
+            </div>
+
+            <div class="play-back">
+                <a href="./index.html" class="back-menu button-style"><button>Back to menu</button></a>
+                <button id="restartButton" class="restart-game button-style" onclick="restartGame()">Restart game</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
