@@ -4,7 +4,7 @@ Projeto de jogo “Pedra, Papel ou Tesoura” simples criado como prática de Ja
 O jogador escolhe uma opção (pedra, papel ou tesoura) e joga contra a máquina.  
 Feito para aprender manipulação do DOM, lógica de jogo e tratamento de eventos.
 
-🔗 [Veja o jogo online](https://wagnertomaz.github.io/rock-paper-scissors-game)<br><br>
+🔗 [Veja o jogo online](https://wagnertomaz.github.io/jogo-pedra-papel-tesoura/)<br><br>
 <img src="./image.png" alt="jogo pedra papel tesoura" width="100%"> 
 
 ---
