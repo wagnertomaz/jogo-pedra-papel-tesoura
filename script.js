@@ -9,29 +9,28 @@ const gameButton = document.querySelector(".gameButton");
 const restartButton = document.querySelector("#restartButton")
 
 function getComputerChoice() {
-    let computerChoice = ['rock', 'paper', 'scissors'];
+    let computerChoice = ['pedra', 'papel', 'tesoura'];
     return computerChoice[Math.floor(Math.random() * 3)];
 }
 
 function playRound(humanChoice, computerChoice){
     if (humanChoice === computerChoice) {
-    result.innerHTML = `<span class="round-span">ROUND ${round}</span><br><span class="tie-span">Tie!</span><br> You and the computer both chose ${humanChoice}.`
+    result.innerHTML = `<span class="round-span">RODADA ${round}</span><br><span class="tie-span">Empate!</span><br> Você e o computador escolheram ${humanChoice}.`
     return;
 
-  } else if (humanChoice === 'rock' && computerChoice === 'scissors' || humanChoice === 'paper' && computerChoice === 'rock' || humanChoice === 'scissors' && computerChoice === 'paper') {
-    result.innerHTML = `<span class="round-span">ROUND ${round}</span><br><span class="win-span">You win!</span><br> Your ${humanChoice} beats the computer's ${computerChoice}.`;
+  } else if (humanChoice === 'pedra' && computerChoice === 'tesoura' || humanChoice === 'papel' && computerChoice === 'pedra' || humanChoice === 'tesoura' && computerChoice === 'papel') {
+    result.innerHTML = `<span class="round-span">RODADA ${round}</span><br><span class="win-span">Você ganhou!</span><br> ${humanChoice} venceu ${computerChoice}.`;
     return "humanPoint";
 
   } else {
-    result.innerHTML = `<span class="round-span">ROUND ${round}</span><br><span class="lose-span">You lose!</span><br> The computer's ${computerChoice} beats your ${humanChoice}.
-`;
+    result.innerHTML = `<span class="round-span">RODADA ${round}</span><br><span class="lose-span">Você perdeu!</span><br> ${computerChoice} venceu ${humanChoice}.`;
     return "computerPoint";
   }
 }
 
 function playGame(humanSelection){
   if(round >= maxRound) {
-    alert("The game is over! Click 'Restart Game' to play again! Or, if you want to return to the main menu, click 'Back to Menu'.");
+    alert("O jogo acabou! Clique em 'Reiniciar Jogo' para jogar novamente! Ou, se quiser voltar ao menu principal, clique em 'Voltar ao Menu'.");
     return;
   }
 
@@ -45,16 +44,16 @@ function playGame(humanSelection){
           computerScore++;
       }
 
-  scoreboard.innerHTML = `SCORE: You <span class="win-span">${humanScore}</span> x <span class="lose-span">${computerScore}</span> Computer`
+  scoreboard.innerHTML = `PLACAR: Você <span class="win-span">${humanScore}</span> x <span class="lose-span">${computerScore}</span> Computador`
 
   if (round === maxRound) {
     setTimeout(() => {
       if (humanScore > computerScore) {
-        result.innerHTML = `<span class="win-span">You won the game!</span><br> The final score was ${humanScore}-${computerScore} in your favor!`;
+        result.innerHTML = `<span class="win-span">Você venceu o jogo!</span><br> Placar final: ${humanScore}-${computerScore} a seu favor!`;
       } else if (computerScore > humanScore) {
-        result.innerHTML = `<span class="lose-span">You lost the game!</span><br> The final score was ${computerScore}-${humanScore} in the computer's favor!`;
+        result.innerHTML = `<span class="lose-span">Você perdeu o jogo!</span><br> Placar final: ${computerScore}-${humanScore} a favor do computador.`;
       } else {
-        result.innerHTML = `<span class="tie-span">The game ended in a tie!</span><br> The final score was ${humanScore}-${computerScore}!`;
+        result.innerHTML = `<span class="tie-span">O jogo terminou empatado!</span><br> Placar final: ${humanScore}-${computerScore}.`;
       }
 
       gameButton.forEach(button => button.disabled = true);
@@ -65,11 +64,11 @@ function playGame(humanSelection){
 
 function restartGame() {
   if (round === 0) {
-    alert("You need to start the game before you can restart it!")
+    alert("Você precisa começar o jogo antes de reiniciar!")
     return;
 
   } else if (round < maxRound) {
-    alert("The game isn't over yet, so you can't restart it!")
+    alert("O jogo ainda não acabou, você não pode reiniciar!")
     return;
   }
 
@@ -77,8 +76,8 @@ function restartGame() {
   computerScore = 0;
   round = 0;
 
-  result.innerHTML = `<span class="round-span"></span><br>The game has 5 rounds.<br>To start the game, make your first move.`;
-  scoreboard.innerHTML = `SCORE: You <span class="win-span">0</span> x <span class="lose-span">0</span> Computer</p>`;
+  result.innerHTML = `<span class="round-span"></span><br>O jogo tem 5 rodadas.<br>Para começar, faça sua primeira jogada.`;
+  scoreboard.innerHTML = `PLACAR: Você <span class="win-span">0</span> x <span class="lose-span">0</span> Computador`;
 
   gameButton.forEach(button => button.disabled = false);
   restartButton.disabled = true;
