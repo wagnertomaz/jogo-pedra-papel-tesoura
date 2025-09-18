@@ -1,4 +1,4 @@
-# ✋🪨📄 Jogo: Pedra Papel Tesoura
+# 🪨📄✂️ Jogo: Pedra Papel Tesoura
 
 Projeto de jogo “Pedra, Papel ou Tesoura” simples criado como prática de JavaScript.  
 O jogador escolhe uma opção (pedra, papel ou tesoura) e joga contra a máquina.  
